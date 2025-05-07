@@ -1,5 +1,5 @@
 {
-  description = "A nixvim configuration";
+  description = "mf nixvim configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -19,16 +19,17 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-
-      perSystem = {system, ...}: let
+      perSystem = {
+        pkgs,
+        system,
+        ...
+      }: let
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
-          inherit system; # or alternatively, set `pkgs`
+          inherit pkgs;
           module = import ./config; # import the module directly
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
-            # inherit (inputs) foo;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

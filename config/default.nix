@@ -1,15 +1,41 @@
 {
   # Import all your configuration modules here
   imports = [
+    # keymaps
+    ./keymaps.nix
+
+    # settings
+    ./settings.nix
+
+    # utilities
+    ./plugins/utils/whichkey.nix
+    ./plugins/utils/telescope.nix
+
+    # ui
     ./plugins/ui/bufferline.nix
     ./plugins/ui/lualine.nix
     ./plugins/ui/web-devicons.nix
+
+    # editor
+    ./plugins/editor/treesitter.nix
+    ./plugins/editor/neo_tree.nix
+
+    # cmp
+    ./plugins/cmp/cmp.nix
+    ./plugins/cmp/cmp-path.nix
+    ./plugins/cmp/cmp-nvim-lsp.nix
+    ./plugins/cmp/cmp-buffer.nix
+    #./plugins/cmp/cmp-cmdline.nix
+
+    # lsp
     ./plugins/lsp/lsp.nix
-    # ./plugins/cmp/cmp.nix
-    ./keymaps.nix
-    ./settings.nix
+    ./plugins/lsp/lsp-lines.nix
+    ./plugins/lsp/lsp-format.nix
+
+    # themes
     ./plugins/themes/default.nix
-    ./plugins/utils/whichkey.nix
-    ./plugins/utils/telescope.nix
+
+    #snippets
+    ./plugins/snippets/luasnip.nix
   ];
 }

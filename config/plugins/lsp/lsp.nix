@@ -9,6 +9,8 @@
         installCargo = false;
         installRustc = false;
       };
+
+      nixd.enable = true;
     };
   };
 }
