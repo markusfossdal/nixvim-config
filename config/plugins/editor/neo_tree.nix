@@ -42,7 +42,7 @@
 
   keymaps = [
     {
-      mode = [ "n" ];
+      mode = ["n"];
       key = "<leader>e";
       action = "<cmd>Neotree toggle<cr>";
       options = {
@@ -50,7 +50,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = ["n"];
       key = "<Tab>";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
@@ -59,7 +59,7 @@
     }
 
     {
-      mode = [ "n" ];
+      mode = ["n"];
       key = "<S-Tab>";
       action = "<Cmd>BufferLineCyclePrev<CR>";
       options = {
@@ -68,4 +68,3 @@
     }
   ];
 }
-

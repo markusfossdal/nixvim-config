@@ -39,9 +39,22 @@
           default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
         };
 
+        # packages = {
+        #   # Lets you run `nix run .` to start nixvim
+        #   default = nvim;
+        # };
+
         packages = {
-          # Lets you run `nix run .` to start nixvim
-          default = nvim;
+          default = pkgs.writeShellApplication {
+            name = "nixvim-with-fonts";
+            runtimeInputs = [
+              nvim
+              pkgs.nerd-fonts.jetbrains-mono
+            ];
+            text = ''
+              exec ${nvim}/bin/nvim "$@"
+            '';
+          };
         };
       };
     };
