@@ -41,17 +41,17 @@
     }
 
     # Clear search
-    # {
-    #   mode = "n";
-    #   key = "<leader>h";
-    #   action = ":nohlsearch<CR>";
-    #   options = {
-    #     silent = true;
-    #     noremap = true;
-    #     expr = false;
-    #     desc = "test";
-    #   };
-    # }
+    {
+      mode = "n";
+      key = "<C-c>";
+      action = ":noh<CR>";
+      options = {
+        silent = true;
+        noremap = true;
+        expr = false;
+        desc = "test";
+      };
+    }
 
     # Cursor in the same position while pasting
     {
@@ -124,22 +124,23 @@
       };
     }
 
-    # Use <leader>y to yank into system clipboard
+    # Use <leader>y to yank into system clipboard (visual and normal mode)
     {
       mode = ["n" "v"];
       key = "<leader>y";
-      action = "'\"+y";
+      action = "\"+y";
       options = {
         desc = "Yank to system clipboard";
       };
     }
 
+    # Use <leader>Y to yank the entire line into system clipboard
     {
       mode = "n";
       key = "<leader>Y";
-      action = "'\"+Y";
+      action = "\"+Y";
       options = {
-        desc = "Yank to system clipboard";
+        desc = "Yank line to system clipboard";
       };
     }
 

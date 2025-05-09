@@ -1,6 +1,7 @@
 {
   config = {
     opts = {
+      clipboard = "unnamedplus"; # Allow yank to system clipboard
       backspace = "2"; # Allow backspace over everything in insert mode
       showcmd = true; # Show partial commands in the last line of the screen
       laststatus = 2; # Always display the status line
