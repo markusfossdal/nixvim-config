@@ -11,7 +11,7 @@
       styles.comments = ["italic"]; # tweak highlight groups
 
       integrations = {
-        cmp = false; # nvim‑cmp completion menu
+        cmp = true; # nvim‑cmp completion menu
         gitsigns = false;
         treesitter = false;
         lualine = false; # extra, not enabled by default

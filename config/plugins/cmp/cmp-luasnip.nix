@@ -1,5 +1,5 @@
 {
   plugins.cmp_luasnip = {
-    enable = true;
+    enable = false;
   };
 }

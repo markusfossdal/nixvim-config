@@ -39,10 +39,10 @@
           default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
         };
 
-         packages = {
-           # Lets you run `nix run .` to start nixvim
-           default = nvim;
-         };
+        packages = {
+          # Lets you run `nix run .` to start nixvim
+          default = nvim;
+        };
 
         #packages = {
         #  default = pkgs.writeShellApplication {
