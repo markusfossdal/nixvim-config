@@ -12,6 +12,12 @@
 
       clangd.enable = true;
       nixd.enable = true;
+      cmake = {
+        enable = true;
+        extraOptions = {
+          single_file_support = true;
+        };
+      };
     };
   };
 }
