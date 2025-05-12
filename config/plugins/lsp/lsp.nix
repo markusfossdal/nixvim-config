@@ -10,6 +10,7 @@
         installRustc = false;
       };
 
+      clangd.enable = true;
       nixd.enable = true;
     };
   };
