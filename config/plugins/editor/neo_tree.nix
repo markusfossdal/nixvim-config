@@ -8,7 +8,9 @@
       "document_symbols"
     ];
     addBlankLineAtTop = false;
-
+    
+    closeIfLastWindow = true;
+    
     filesystem = {
       bindToCwd = false;
       followCurrentFile = {

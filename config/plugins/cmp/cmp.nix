@@ -6,7 +6,6 @@
     settings = {
       sources = [
         {name = "nvim_lsp";}
-        # {name = "luasnip";}
         {name = "path";}
         {name = "buffer";}
         {name = "cmdline";}
@@ -30,7 +29,17 @@
         "<S-CR>" = "cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })";
         "<C-d>" = "cmp.mapping.scroll_docs(-4)";
         "<C-f>" = "cmp.mapping.scroll_docs(4)";
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
+
+        # "<CR>" = "cmp.mapping.confirm({ select = true })";
+        "<CR>" = ''
+          cmp.mapping(function(fallback)
+            if cmp.visible() and cmp.get_selected_entry() then
+              cmp.confirm({ select = false })
+            else
+              fallback()
+            end
+          end, { "i", "s" })
+        '';
         "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
         "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
       };

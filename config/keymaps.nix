@@ -239,5 +239,14 @@
         desc = "Simpler pane navigation";
       };
     }
+
+    {
+      mode = "n";
+      key = "<leader>q";
+      action = ":bd<CR>";
+      options = {
+        desc = "Close current buffer";
+      };
+    }
   ]; #end keymaps
 }
