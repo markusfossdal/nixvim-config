@@ -10,6 +10,7 @@
     # utilities
     ./plugins/utils/whichkey.nix
     ./plugins/utils/telescope.nix
+    ./plugins/utils/vim-tmux-navigator.nix
 
     # ui
     ./plugins/ui/bufferline.nix
