@@ -16,6 +16,14 @@
       followCurrentFile = {
         enabled = true;
       };
+    filteredItems = {
+        hideDotfiles = false;    
+        hideGitignored = true;
+        neverShow = [
+            ".DS_store"
+            ".git"
+                ];
+      };
     };
 
     defaultComponentConfigs = {
