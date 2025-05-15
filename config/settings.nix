@@ -25,6 +25,8 @@
       relativenumber = true; # Show relative line numbers
       number = true; # Show absolute line number of the current line
       hidden = true; # Allows abandoment of buffer while keeping it in memory?
+      ignorecase = true; # makes search case-insensitive
+      smartcase = true; # makes search case-insensitive
     };
   };
 }
