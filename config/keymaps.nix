@@ -3,7 +3,10 @@
   keymaps = [
     # Map shift-W to go to the far right of the line
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<S-w>";
       action = "$";
       options = {
@@ -16,7 +19,10 @@
 
     # Map shift-W to go to the far left of the line
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<S-b>";
       action = "0";
       options = {
@@ -126,7 +132,10 @@
 
     # Use <leader>y to yank into system clipboard (visual and normal mode)
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>y";
       action = "\"+y";
       options = {
@@ -146,7 +155,10 @@
 
     # Delete to blackhole register
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>d";
       action = "'_d";
       options = {
@@ -174,7 +186,10 @@
 
     # Remap Ctrl+c to ESC
     {
-      mode = ["i" "v"];
+      mode = [
+        "i"
+        "v"
+      ];
       key = "<C-c>";
       action = "<Esc>";
       options = {
@@ -248,5 +263,5 @@
         desc = "Close current buffer";
       };
     }
-  ]; #end keymaps
+  ]; # end keymaps
 }

@@ -1,61 +1,59 @@
 {
   description = "mf nixvim configuration";
 
+  # Inputs
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
-    nixvim,
-    flake-parts,
-    ...
-  } @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
+  # Outputs
+  outputs =
+    {
+      self,
+      flake-parts,
+      nixpkgs,
+      nixvim,
+      ...
+    }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+
+      # Target systems
       systems = [
         "x86_64-linux"
         "aarch64-linux"
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-      perSystem = {
-        pkgs,
-        system,
-        ...
-      }: let
-        nixvimLib = nixvim.lib.${system};
-        nixvim' = nixvim.legacyPackages.${system};
-        nixvimModule = {
-          inherit pkgs;
-          module = import ./config; # import the module directly
-          extraSpecialArgs = {
+
+      # Per-system configuration
+      perSystem =
+        { system, ... }:
+        let
+          # Explicit binding of pkgs
+          pkgs = nixpkgs.legacyPackages.${system};
+
+          # Convenience handles
+          nixvimLib = nixvim.lib.${system};
+          nixvimPkgs = nixvim.legacyPackages.${system};
+
+          # Nixvim module definition
+          nixvimModule = {
+            inherit pkgs; # make pkgs visible in all modules
+            module = ./config; # root Nixvim module (can import sub-modules)
+            # extraSpecialArgs = { };  # add more args here if needed
           };
-        };
-        nvim = nixvim'.makeNixvimWithModule nixvimModule;
-      in {
-        checks = {
-          # Run `nix flake check .` to verify that your config is not broken
-          default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-        };
 
-        packages = {
-          # Lets you run `nix run .` to start nixvim
-          default = nvim;
-        };
+          # Build the editor
+          nvim = nixvimPkgs.makeNixvimWithModule nixvimModule;
+        in
+        {
+          # `nix run .` → start Nixvim
+          packages.default = nvim;
 
-        #packages = {
-        #  default = pkgs.writeShellApplication {
-        #    name = "nixvim-with-fonts";
-        #    runtimeInputs = [
-        #      nvim
-        #      pkgs.nerd-fonts.jetbrains-mono
-        #    ];
-        #    text = ''
-        #      exec ${nvim}/bin/nvim "$@"
-        #    '';
-        #  };
-        #};
-      };
+          # `nix flake check .`
+          checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+        };
     };
 }

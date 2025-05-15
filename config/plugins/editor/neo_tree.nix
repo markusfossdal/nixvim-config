@@ -8,21 +8,21 @@
       "document_symbols"
     ];
     addBlankLineAtTop = false;
-    
+
     closeIfLastWindow = true;
-    
+
     filesystem = {
       bindToCwd = false;
       followCurrentFile = {
         enabled = true;
       };
-    filteredItems = {
-        hideDotfiles = false;    
+      filteredItems = {
+        hideDotfiles = false;
         hideGitignored = true;
         neverShow = [
-            ".DS_store"
-            ".git"
-                ];
+          ".DS_store"
+          ".git"
+        ];
       };
     };
 
@@ -52,7 +52,7 @@
 
   keymaps = [
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<leader>e";
       action = "<cmd>Neotree toggle<cr>";
       options = {
@@ -60,7 +60,7 @@
       };
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<Tab>";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
@@ -69,7 +69,7 @@
     }
 
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<S-Tab>";
       action = "<Cmd>BufferLineCyclePrev<CR>";
       options = {

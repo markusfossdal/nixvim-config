@@ -31,7 +31,7 @@
     # lsp
     ./plugins/lsp/lsp.nix
     ./plugins/lsp/lsp-lines.nix
-    ./plugins/lsp/lsp-format.nix
+    ./plugins/lsp/conform-nvim.nix
 
     # themes
     ./plugins/themes/default.nix
