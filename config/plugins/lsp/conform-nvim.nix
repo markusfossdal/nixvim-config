@@ -38,7 +38,7 @@
         "n"
         "v"
       ];
-      key = "<leader>f";
+      key = "<leader>fl";
       action = ":lua require('conform').format()<CR>";
       options = {
         silent = true;

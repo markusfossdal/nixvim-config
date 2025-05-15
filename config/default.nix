@@ -20,6 +20,7 @@
     # editor
     ./plugins/editor/treesitter.nix
     ./plugins/editor/neo_tree.nix
+    ./plugins/editor/flash.nix
 
     # cmp
     ./plugins/cmp/cmp.nix

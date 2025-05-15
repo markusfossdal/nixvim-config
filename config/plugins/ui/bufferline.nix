@@ -1,4 +1,10 @@
 {
-  plugins.bufferline.enable = true;
-  plugins.web-devicons.enable = true;
+  plugins.bufferline = {
+    enable = true;
+    settings = {
+      options = {
+        separator_style = "padded_slant";
+      };
+    };
+  };
 }
