@@ -26,7 +26,8 @@
     ./plugins/cmp/cmp-path.nix
     ./plugins/cmp/cmp-nvim-lsp.nix
     ./plugins/cmp/cmp-buffer.nix
-    #./plugins/cmp/cmp-cmdline.nix
+    ./plugins/cmp/cmp-cmdline.nix
+    ./plugins/cmp/cmp-tmux.nix
 
     # lsp
     ./plugins/lsp/lsp.nix

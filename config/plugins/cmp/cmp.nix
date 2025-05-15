@@ -9,6 +9,7 @@
         {name = "path";}
         {name = "buffer";}
         {name = "cmdline";}
+        {name = "tmux";}
       ]; #sources
       window = {
         completion = {
