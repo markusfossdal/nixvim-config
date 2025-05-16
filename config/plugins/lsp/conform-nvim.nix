@@ -1,6 +1,5 @@
 # formatting tool
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # formatter binaries
   extraPackages = with pkgs; [
     #nix
@@ -18,9 +17,9 @@
     enable = true;
     settings = {
       formatters_by_ft = {
-        nix = [ "nixfmt" ]; # or "nixfmt"
+        nix = ["nixfmt"]; # or "nixfmt"
         # nix = ["alejandra"];
-        "_" = [ "trim_whitespace" ];
+        "_" = ["trim_whitespace"];
       };
 
       format_on_save = ''
