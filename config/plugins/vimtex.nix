@@ -4,7 +4,7 @@
 
   #additional packages
   extraPackages = with pkgs; [
-    latexmk # compiler
+    texlivePackages.latexmk # compiler
     texlab # language server
     zathura # pdf viewer
     tectonic # modern tex engine
@@ -23,10 +23,10 @@
       view_method = "zathura";
     };
 
-    extraConfigLua = ''
-      vim.g.vimtex_view_method      = "zathura"  -- PDF viewer
-      vim.g.vimtex_compiler_method  = "latexmk"  -- Continuous compilation
-    '';
+    # extraConfigLua = ''
+    #   vim.g.vimtex_view_method      = "zathura"  -- PDF viewer
+    #   vim.g.vimtex_compiler_method  = "latexmk"  -- Continuous compilation
+    # '';
   };
 
   # Tex lsp features (lsp, linting, completion)
