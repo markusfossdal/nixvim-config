@@ -18,6 +18,9 @@
           single_file_support = true;
         };
       };
+
+      texlab.enable = true; # tex language server
+
     };
   };
 }

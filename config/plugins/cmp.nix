@@ -5,12 +5,13 @@
     autoLoad = true;
     settings = {
       sources = [
-        {name = "nvim_lsp";}
-        {name = "path";}
-        {name = "buffer";}
-        {name = "cmdline";}
-        {name = "tmux";}
-      ]; #sources
+        { name = "nvim_lsp"; }
+        { name = "vimtex"; }
+        { name = "path"; }
+        { name = "buffer"; }
+        { name = "cmdline"; }
+        { name = "tmux"; }
+      ]; # sources
       window = {
         completion = {
           border = "solid";
@@ -18,7 +19,7 @@
         documentation = {
           border = "solid";
         };
-      }; #window
+      }; # window
 
       mapping = {
         "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
@@ -44,8 +45,8 @@
         "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
         "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
       };
-    }; #mapping
-  }; #settings
+    }; # mapping
+  }; # settings
   extraConfigLua = ''
          local cmp = require'cmp'
 
