@@ -1,12 +1,15 @@
 # formatting tool
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # formatter binaries
   extraPackages = with pkgs; [
     #nix
     nixfmt-rfc-style
     # alejandra
 
-    #c/c++
+    #c and c++
+    clang-tools
+
   ];
 
   # Ensures lsp-format is disabled and does not interfer with conform-nvim.
@@ -17,9 +20,11 @@
     enable = true;
     settings = {
       formatters_by_ft = {
-        nix = ["nixfmt"]; # or "nixfmt"
+        nix = [ "nixfmt" ];
         # nix = ["alejandra"];
-        "_" = ["trim_whitespace"];
+        c = [ "clang-format" ];
+        cpp = [ "clang-format" ];
+        "_" = [ "trim_whitespace" ];
       };
 
       format_on_save = ''
