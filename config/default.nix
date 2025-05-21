@@ -20,6 +20,7 @@
     ./plugins/cmp-tmux.nix
     ./plugins/lsp.nix
     ./plugins/lsp-lines.nix
+    ./plugins/lsp-signature.nix
     ./plugins/conform-nvim.nix
     ./plugins/theme.nix
     ./plugins/luasnip.nix
