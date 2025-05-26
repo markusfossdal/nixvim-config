@@ -1,6 +1,6 @@
 {
   #by Folke
   plugins.noice = {
-    enable = true;
+    enable = false;
   };
 }
