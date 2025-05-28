@@ -20,6 +20,7 @@
         # nix = ["alejandra"];
         c = [ "clang-format" ];
         cpp = [ "clang-format" ];
+        rust = [ "rustfmt" ];
         "_" = [ "trim_whitespace" ];
       };
 
