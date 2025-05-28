@@ -3,13 +3,9 @@
 {
   # formatter binaries
   extraPackages = with pkgs; [
-    #nix
     nixfmt-rfc-style
-    # alejandra
-
-    #c and c++
     clang-tools
-
+    rustfmt
   ];
 
   # Ensures lsp-format is disabled and does not interfer with conform-nvim.
