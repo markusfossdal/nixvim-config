@@ -25,6 +25,7 @@
     ./plugins/conform-nvim.nix
     ./plugins/theme.nix
     ./plugins/luasnip.nix
+    ./plugins/tiny-inline-diagnostic.nix
 
     ./plugins/vimtex.nix
     ./plugins/cmp-vimtex.nix

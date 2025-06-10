@@ -206,6 +206,7 @@
         }
       },
               defaults = {
+        wrap_results = true;
         mappings = {
           i = { -- insert mode
             ["<C-j>"] = require("telescope.actions").move_selection_next,
