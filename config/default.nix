@@ -26,6 +26,7 @@
     ./plugins/theme.nix
     ./plugins/luasnip.nix
     ./plugins/tiny-inline-diagnostic.nix
+    ./plugins/smear-cursor.nix
 
     ./plugins/vimtex.nix
     ./plugins/cmp-vimtex.nix
