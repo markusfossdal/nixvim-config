@@ -21,10 +21,8 @@
         };
       }; # window
 
-      #delay cmp ?
       performance = {
-        debounce = 200;
-        throttle = 100;
+        max_view_entries = 30;
       };
 
       mapping = {
