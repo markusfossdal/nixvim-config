@@ -15,7 +15,7 @@
       };
       padding = " ";
       shadow_guibg = "#121315";
-      toggle_key = "<leader>m";
+      toggle_key = "<C-S-s>";
     };
   };
 }

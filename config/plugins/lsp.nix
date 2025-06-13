@@ -10,7 +10,12 @@
         installRustc = false;
       };
 
-      clangd.enable = true;
+      clangd = {
+        enable = true;
+        # settings = {
+        #   debounce_text_changes = 200;
+        # };
+      };
       nixd.enable = true;
       cmake = {
         enable = true;
@@ -18,8 +23,6 @@
           single_file_support = true;
         };
       };
-
-      texlab.enable = true; # tex language server
 
     };
   };

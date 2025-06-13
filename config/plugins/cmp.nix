@@ -22,7 +22,7 @@
       }; # window
 
       performance = {
-        max_view_entries = 30;
+        # max_view_entries = 30;
       };
 
       mapping = {
