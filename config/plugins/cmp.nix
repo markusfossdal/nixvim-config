@@ -6,7 +6,7 @@
     settings = {
       sources = [
         { name = "nvim_lsp"; }
-        { name = "vimtex"; }
+        # { name = "vimtex"; }
         { name = "path"; }
         { name = "buffer"; }
         { name = "cmdline"; }
@@ -20,6 +20,12 @@
           border = "solid";
         };
       }; # window
+
+      #delay cmp ?
+      performance = {
+        debounce = 200;
+        throttle = 100;
+      };
 
       mapping = {
         "<C-Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";

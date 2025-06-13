@@ -28,7 +28,7 @@
     ./plugins/tiny-inline-diagnostic.nix
     ./plugins/smear-cursor.nix
 
-    ./plugins/vimtex.nix
-    ./plugins/cmp-vimtex.nix
+    # ./plugins/vimtex.nix
+    # ./plugins/cmp-vimtex.nix
   ];
 }
