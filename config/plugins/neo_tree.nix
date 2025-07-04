@@ -19,6 +19,7 @@
       filteredItems = {
         hideDotfiles = false;
         hideGitignored = true;
+        visible = true;
         neverShow = [
           ".DS_store"
           ".git"
