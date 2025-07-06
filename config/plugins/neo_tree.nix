@@ -21,8 +21,8 @@
         hideGitignored = true;
         visible = true;
         neverShow = [
-          ".DS_store"
-          ".git"
+          # ".DS_store"
+          # ".git"
         ];
       };
     };
