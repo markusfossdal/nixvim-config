@@ -9,7 +9,7 @@
     ];
     addBlankLineAtTop = false;
 
-    closeIfLastWindow = true;
+    closeIfLastWindow = false;
 
     filesystem = {
       bindToCwd = false;
