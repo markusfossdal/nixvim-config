@@ -12,9 +12,8 @@
 
       clangd = {
         enable = true;
-        # settings = {
-        #   debounce_text_changes = 200;
-        # };
+        package = null;
+        cmd = [ "/usr/bin/clangd" ];
       };
       nixd.enable = true;
       cmake = {
