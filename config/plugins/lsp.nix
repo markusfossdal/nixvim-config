@@ -13,10 +13,11 @@
 
       clangd = {
         enable = true;
-        package = pkgs.clang-tools;
+        # package = pkgs.clang-tools;
       };
 
       nixd.enable = true;
+
       cmake = {
         enable = true;
         extraOptions = {
