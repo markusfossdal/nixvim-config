@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins.lsp = {
     enable = true;
@@ -12,7 +13,9 @@
 
       clangd = {
         enable = true;
+        package = pkgs.clang-tools;
       };
+
       nixd.enable = true;
       cmake = {
         enable = true;
