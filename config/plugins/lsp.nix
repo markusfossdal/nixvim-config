@@ -12,8 +12,6 @@
 
       clangd = {
         enable = true;
-        package = null;
-        cmd = [ "/usr/bin/clangd" ];
       };
       nixd.enable = true;
       cmake = {
