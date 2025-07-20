@@ -13,6 +13,10 @@
 
       clangd = {
         enable = true;
+        cmd = [
+          "clangd"
+          "--header-insertion=never"
+        ];
         # package = pkgs.clang-tools;
       };
 
