@@ -1,6 +1,6 @@
 {
   plugins.flash = {
-    enable = false;
+    enable = true;
   };
 
   extraConfigLua = ''

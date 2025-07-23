@@ -11,7 +11,7 @@
     ./plugins/web-devicons.nix
     ./plugins/treesitter.nix
     ./plugins/neo_tree.nix
-    ./plugins/flash.nix
+    # ./plugins/flash.nix
     ./plugins/cmp.nix
     ./plugins/cmp-path.nix
     ./plugins/cmp-nvim-lsp.nix
