@@ -22,6 +22,10 @@
 
       nixd.enable = true;
 
+      pyright = {
+        enable = true;
+      };
+
       cmake = {
         enable = true;
         extraOptions = {
