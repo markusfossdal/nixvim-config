@@ -6,6 +6,7 @@
     nixfmt-rfc-style
     clang-tools
     rustfmt
+    ruff # for python
   ];
 
   # Ensures lsp-format is disabled and does not interfer with conform-nvim.
@@ -21,6 +22,10 @@
         c = [ "clang-format" ];
         cpp = [ "clang-format" ];
         rust = [ "rustfmt" ];
+        python = [
+          "ruff_format"
+          "ruff_organize_imports"
+        ];
         "_" = [ "trim_whitespace" ];
       };
 
